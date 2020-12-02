@@ -1,0 +1,56 @@
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Muli', sans-serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Catamaran', sans-serif;
+// font-family: 'Signika', sans-serif;
+
+// fonts
+$app_font: 'Muli', sans-serif;
+$app_font_size: 16px;
+$fw_lvl1: 400;
+$fw_lvl2: 500;
+$fw_lvl3: 600;
+$lh_lvl1: 1.2;
+$lh_lvl2: 1.5;
+
+// success
+$success_color:#00c853;
+$success_color_light:#5efc82;
+$success_color_dark:#009624;
+
+// error
+$error_color:#dc3545;
+$error_color_light:#eb5261;
+$error_color_dark:#c01627;
+
+// warning
+$warning_color:#ffc107;
+$warning_color_light:#fff350;
+$warning_color_dark:#f3b60e;
+
+// colors
+$white:#ffffff;
+$black:#000000;
+$grey:#dbdbdb;
+$grey_dark:#686868;
+$grey_light:#f8f9fa;
+$dark:#333333;
+
+// material theming
+@import '~@angular/material/theming';
+@include mat-core();
+$myblog-primary: mat-palette($mat-blue, 500);
+$myblog-accent: mat-palette($mat-grey, 700);
+$myblog-warn: mat-palette($mat-red);
+$myblog-theme: mat-light-theme($myblog-primary, $myblog-accent, $myblog-warn);
+@include angular-material-theme($myblog-theme);
+
+// // typography
+$custom-typography: 
+mat-typography-config( 
+    $font-family: $app_font,
+    $headline: mat-typography-level(32px, 48px, 700), 
+    $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include angular-material-typography($custom-typography);
